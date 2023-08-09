@@ -21,18 +21,36 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 # print(joined_password)
 
 # Using for loop
+password_list = []
+for char in range(1, nr_letters + 1):
+    char = random.choice(letters)
+    password_list.append(char)
+
+for char in range(1, nr_letters + 1):
+    char = random.choice(symbols)
+    password_list.append(char)
+
+for char in range(1, nr_letters + 1):
+    char = random.choice(numbers)
+    password_list.append(char)
+
+random.shuffle(password_list)
+password = "".join(password_list)
+print(password)
+
+
 
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-random_letters = random.choices(letters, k=nr_letters)
-random_symbols = random.choices(symbols, k=nr_symbols)
-random_numbers = random.choices(numbers, k=nr_numbers)
-joined_list = random_letters + random_symbols + random_numbers
-random.shuffle(joined_list)
-joined_password = "".join(joined_list)
+# random_letters = random.choices(letters, k=nr_letters)
+# random_symbols = random.choices(symbols, k=nr_symbols)
+# random_numbers = random.choices(numbers, k=nr_numbers)
+# joined_list = random_letters + random_symbols + random_numbers
+# random.shuffle(joined_list)
+# joined_password = "".join(joined_list)
 
-print(joined_password)
+# print(joined_password)
 
 
