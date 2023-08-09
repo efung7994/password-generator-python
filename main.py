@@ -12,15 +12,27 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 
-random_letters = random.choices(letters, k=nr_letters)
-random_symbols = random.choices(symbols, k=nr_symbols)
-random_numbers = random.choices(numbers, k=nr_numbers)
-joined_list = random_letters + random_symbols + random_numbers
-joined_password = "".join(joined_list)
+# random_letters = random.choices(letters, k=nr_letters)
+# random_symbols = random.choices(symbols, k=nr_symbols)
+# random_numbers = random.choices(numbers, k=nr_numbers)
+# joined_list = random_letters + random_symbols + random_numbers
+# joined_password = "".join(joined_list)
 
-print(joined_password)
+# print(joined_password)
+
+# Using for loop
 
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+random_letters = random.choices(letters, k=nr_letters)
+random_symbols = random.choices(symbols, k=nr_symbols)
+random_numbers = random.choices(numbers, k=nr_numbers)
+joined_list = random_letters + random_symbols + random_numbers
+random.shuffle(joined_list)
+joined_password = "".join(joined_list)
+
+print(joined_password)
+
 
